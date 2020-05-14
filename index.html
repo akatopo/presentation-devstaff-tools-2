@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Tools II: ⌨️, 👨🏻‍🚀, 🎨, 💡, and 🔳</title>
+    <link rel="stylesheet" type="text/css" href="build/build.css">
+  </head>
+  <body>
+    <article class="deck">
+      <section>
+        <h1>Tools II: ⌨️, 👨🏻‍🚀, 🎨, 💡, and 🔳</h1>
+        <h3><a href="https://github.com/akatopo"><i class="fa fa-github"></i> akatopo</a></h3><img class="avatar avatar--small" src="images/avatar.jpg">
+      </section>
+      <section class="emphatic-text" data-bespoke-backdrop="emphatic">
+        <h1>⌨️</h1>
+        <h1>Key sequences</h1>
+        <h2>"Compose key" for <i class="fa fa-apple"></i> and <i class="fa fa-windows"></i></h2><a href="https://karabiner-elements.pqrs.org/">karabiner-elements.pqrs.org</a><a href="http://wincompose.info/">wincompose.info</a>
+      </section>
+      <section>
+        <h2>Getting this to work on MacOS</h2>
+        <p>Install karabiner-elements</p>
+        <pre><code class="language-shell">brew cask install karabiner-elements</code></pre>
+      </section>
+      <section>
+        <p>Remap <code>right_option</code> to <code>non_us_backslash</code></p><img style="width:500px" src="images/karabiner.png">
+      </section>
+      <section>
+        <p>Edit your <code>~/Library/KeyBindings/DefaultKeyBinding.dict</code> accordingly</p>
+        <pre><code class="language-javascript">{
+  "§" = {
+    "." = {
+        "." = ("insertText:", "…");
+    };
+    "+" = {
+        "1" = ("insertText:", "👍");
+    };
+  };
+}
+</code></pre>
+      </section>
+      <section>
+        <h2>Restart apps and have fun 👌🏻</h2>
+        <video class="term-video" src="images/compose.mp4" data-rewind preload="auto"></video>
+      </section>
+      <section>
+        <h2>Some premade <code>DefaultKeyBinding.dict</code></h2>
+        <ul class="build build-items">
+          <li><a href="https://github.com/akatopo/dotfiles/blob/master/keybindings/Library/KeyBindings/DefaultKeyBinding.dict">Own variation</a></li>
+          <li><a href="http://lolengine.net/raw-attachment/blog/2012/06/17/compose-key-on-os-x/DefaultKeyBinding.dict">X11 compose rules port (uses <code>F13</code> as compose key)
+              </a></li>
+        </ul>
+      </section>
+      <section class="emphatic-text" data-bespoke-backdrop="emphatic">
+        <h1>👨🏻‍🚀</h1>
+        <h1>Spaceship</h1>
+        <h2>A zsh prompt for astronauts</h2><a href="https://denysdovhan.com/spaceship-prompt/">denysdovhan.com/spaceship-prompt</a>
+      </section>
+      <section>
+        <h2>Installing</h2>
+        <ul class="build build-items">
+          <li>
+            <p>zsh is required</p>
+          </li>
+          <li>
+            <p>a font with powerline glyphs is needed, <a href="https://github.com/tonsky/FiraCode">fira code</a> is good to go</p>
+          </li>
+          <li>
+            <p>install via <code>npm</code></p>
+            <pre><code class="language-shell">npm install -g spaceship-prompt</code></pre>
+          </li>
+          <li>more installation methods exist (ex. oh-my-zsh), check <a href="https://github.com/denysdovhan/spaceship-prompt#installing">website</a></li>
+        </ul>
+      </section>
+      <section>
+        <h2>Spaaaace 🪐</h2>
+        <video class="term-video" src="images/spaceship.mp4" data-rewind preload="auto"></video>
+      </section>
+      <section class="emphatic-text" data-bespoke-backdrop="emphatic">
+        <h1>🎨</h1>
+        <h1>pygmentize</h1>
+        <h2>Syntax highlighting for the terminal</h2><a href="https://pygments.org/">pygments.org</a>
+      </section>
+      <section>
+        <h2>Installing</h2>
+        <p>install via <code>pip</code>
+          <pre><code class="language-shell">pip install Pygments</code></pre>
+        </p>
+        <p>then alias
+          <pre><code class="language-shell">alias syntax='pygmentize -g'
+</code></pre>
+        </p>
+      </section>
+      <section>
+        <h2>Highlight!</h2>
+        <video class="term-video" src="images/syntax.mp4" data-rewind preload="auto"></video>
+      </section>
+      <section class="emphatic-text" data-bespoke-backdrop="emphatic">
+        <h1>💡</h1>
+        <h1>tldr</h1>
+        <h2>That man page is too damn long</h2><a href="https://tldr.sh/">tldr.sh</a>
+      </section>
+      <section>
+        <h2>Installing</h2>
+        <p>install via <code>npm</code></p>
+        <pre><code class="language-shell">npm install -g tldr</code></pre>
+        <p>or just run with <code>npx</code></p>
+        <p>Clients in other languages exist, check <a href="https://tldr.sh/">website</a></p>
+      </section>
+      <section>
+        <h2>How to lolcat 🐈🌈</h2>
+        <video class="term-video" src="images/tldr.mp4" data-rewind preload="auto"></video>
+      </section>
+      <section class="emphatic-text" data-bespoke-backdrop="emphatic">
+        <h1>🔳</h1>
+        <h1>qrcode</h1>
+        <h2>For sharing that wifi password fast</h2><a href="https://github.com/soldair/node-qrcode">github.com/soldair/node-qrcode</a>
+      </section>
+      <section>
+        <h2>Installing</h2>
+        <p>install via <code>npm</code></p>
+        <pre><code class="language-shell">npm install -g qrcode</code></pre>
+        <p>or just run with <code>npx</code></p>
+      </section>
+      <section>
+        <h2>Clone this presentation</h2>
+        <video class="term-video" src="images/qrcode.mp4" data-rewind preload="auto"></video>
+      </section>
+      <section>
+        <h2>🙇🏻‍♂️</h2>
+        <video class="term-video" src="images/thanks.mp4" data-rewind preload="auto"></video>
+      </section>
+    </article>
+    <script src="build/build.js"></script>
+  </body>
+</html>

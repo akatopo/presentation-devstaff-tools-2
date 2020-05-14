@@ -1,0 +1,145 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+    title Tools II: ⌨️, 👨🏻‍🚀, 🎨, 💡, and 🔳
+
+    link(rel='stylesheet', type='text/css', href='build/build.css')
+
+  body
+
+    article.deck
+
+      section
+        h1 Tools II: ⌨️, 👨🏻‍🚀, 🎨, 💡, and 🔳
+        h3
+          a(href='https://github.com/akatopo') #[i.fa.fa-github] akatopo
+        img.avatar.avatar--small(src='images/avatar.jpg')
+
+      section.emphatic-text(data-bespoke-backdrop='emphatic')
+        h1 ⌨️
+        h1 Key sequences
+        h2 "Compose key" for #[i.fa.fa-apple] and #[i.fa.fa-windows]
+        a(href='https://karabiner-elements.pqrs.org/') karabiner-elements.pqrs.org
+        a(href='http://wincompose.info/') wincompose.info
+
+      section
+        h2 Getting this to work on MacOS
+        p Install karabiner-elements
+        pre: code.language-shell.
+          brew cask install karabiner-elements
+      section
+        p Remap #[code right_option] to #[code non_us_backslash]
+        img(style="width:500px" src="images/karabiner.png")
+
+      section
+        p Edit your #[code ~/Library/KeyBindings/DefaultKeyBinding.dict] accordingly
+        pre
+          code.language-javascript.
+            {
+              "§" = {
+                "." = {
+                    "." = ("insertText:", "…");
+                };
+                "+" = {
+                    "1" = ("insertText:", "👍");
+                };
+              };
+            }
+
+      section
+        h2 Restart apps and have fun 👌🏻
+        video.term-video(src="images/compose.mp4" data-rewind preload="auto")
+
+      section
+        h2 Some premade #[code DefaultKeyBinding.dict]
+        ul.build.build-items
+          li: a(href="https://github.com/akatopo/dotfiles/blob/master/keybindings/Library/KeyBindings/DefaultKeyBinding.dict").
+            Own variation
+          li: a(href="http://lolengine.net/raw-attachment/blog/2012/06/17/compose-key-on-os-x/DefaultKeyBinding.dict").
+            X11 compose rules port (uses #[code F13] as compose key)
+
+      section.emphatic-text(data-bespoke-backdrop='emphatic')
+        h1 👨🏻‍🚀
+        h1 Spaceship
+        h2 A zsh prompt for astronauts
+        a(href='https://denysdovhan.com/spaceship-prompt/') denysdovhan.com/spaceship-prompt
+
+      section
+        h2 Installing
+        ul.build.build-items
+          li: p zsh is required
+          li: p a font with powerline glyphs is needed, #[a(href="https://github.com/tonsky/FiraCode") fira code] is good to go
+          li
+            p install via #[code npm]
+            pre
+              code.language-shell.
+                npm install -g spaceship-prompt
+          li more installation methods exist (ex. oh-my-zsh), check #[a(href='https://github.com/denysdovhan/spaceship-prompt#installing') website]
+
+      section
+        h2 Spaaaace 🪐
+        video.term-video(src="images/spaceship.mp4" data-rewind preload="auto")
+
+      section.emphatic-text(data-bespoke-backdrop='emphatic')
+        h1 🎨
+        h1 pygmentize
+        h2 Syntax highlighting for the terminal
+        a(href="https://pygments.org/") pygments.org
+
+      section
+        h2 Installing
+        p install via #[code pip]
+          pre: code.language-shell.
+            pip install Pygments
+        p then alias
+          pre: code.language-shell.
+            alias syntax='pygmentize -g'
+
+      section
+        h2 Highlight!
+        video.term-video(src="images/syntax.mp4" data-rewind preload="auto")
+
+      section.emphatic-text(data-bespoke-backdrop='emphatic')
+        h1 💡
+        h1 tldr
+        h2 That man page is too damn long
+        a(href="https://tldr.sh/") tldr.sh
+
+      section
+        h2 Installing
+        p install via #[code npm]
+        pre
+          code.language-shell.
+            npm install -g tldr
+        p or just run with #[code npx]
+        p Clients in other languages exist, check #[a(href="https://tldr.sh/") website]
+
+      section
+        h2 How to lolcat 🐈🌈
+        video.term-video(src="images/tldr.mp4" data-rewind preload="auto")
+
+      section.emphatic-text(data-bespoke-backdrop='emphatic')
+        h1 🔳
+        h1 qrcode
+        h2 For sharing that wifi password fast
+        a(href="https://github.com/soldair/node-qrcode") github.com/soldair/node-qrcode
+
+      section
+        h2 Installing
+        p install via #[code npm]
+        pre
+          code.language-shell.
+            npm install -g qrcode
+        p or just run with #[code npx]
+
+      section
+        h2 Clone this presentation
+        video.term-video(src="images/qrcode.mp4" data-rewind preload="auto")
+
+      section
+        h2 🙇🏻‍♂️
+        video.term-video(src="images/thanks.mp4" data-rewind preload="auto")
+
+    script(src='build/build.js')

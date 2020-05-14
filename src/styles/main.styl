@@ -1,0 +1,31 @@
+@import 'font-awesome/css/font-awesome.css'
+@import 'prism-themes/themes/prism-vsc-dark-plus.css'
+@import './fira-code'
+
+pre[class*="language-"],
+code[class*="language-"],
+code, kbd, pre, samp
+  font-family 'fira code', Monaco, 'Andale Mono', 'Ubuntu Mono', monospace
+
+ul li pre[class*="language-"]
+  width fit-content
+  margin-left auto
+  margin-right: auto
+
+img.emoji
+  height 1em
+  width 1em
+  margin 0 .05em 0 .1em
+  vertical-align -0.1em
+
+video.term-video
+  width: 500px
+  margin-top -30px
+  margin-bottom -30px
+  z-index -1
+
+.image-bg
+  background-image url(../images/sleep.jpg)
+  background-size cover
+  background-position center
+  background-repeat no-repeat
